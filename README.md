@@ -44,12 +44,6 @@ Para levantar el servidor en modo desarrollo:
 npx ts-node src/index.ts
 ```
 
-o, si configuraste un script en package.json:
-
-```bash
-npm run dev
-```
-
 El servidor quedará disponible en:
 
 ```
