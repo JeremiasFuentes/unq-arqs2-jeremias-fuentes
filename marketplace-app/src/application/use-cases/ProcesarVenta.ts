@@ -1,8 +1,8 @@
 import { ProductoRepository } from "../../domain/repositories/ProductoRepository";
 import { Producto } from "../../domain/models/Producto";
-
+import { MongoProductoRepository } from "../../infrastructure/persistence/repositories/MongoProductoRepository";
 export class ProcesarVenta {
-  constructor(private productoRepo: ProductoRepository) {}
+  constructor(private productoRepo: MongoProductoRepository) {}
 
   async ejecutar(productoId: string, cantidad: number): Promise<Producto> {
     const producto = await this.productoRepo.buscarPorId(productoId);
